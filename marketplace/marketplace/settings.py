@@ -26,8 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true' 
-#'RENDER' not in os.environ
+DEBUG ='RENDER' not in os.environ
 
 ALLOWED_HOSTS = ['proyecto-final-uneweb.onrender.com', 
     '.onrender.com',]
