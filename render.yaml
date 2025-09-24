@@ -1,0 +1,32 @@
+# render.yaml
+services:
+  - type: web
+    name: proyecto-final-uneweb
+    env: python
+    plan: free
+    region: ohio
+    branch: main
+    rootDirectory: marketplace  # ¡IMPORTANTE! Apunta a tu carpeta marketplace
+    
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r ../requirements.txt
+      python manage.py collectstatic --noinput
+      python manage.py migrate
+    
+    startCommand: cd marketplace && gunicorn marketplace.wsgi:application
+    
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: False
+      - key: DATABASE_URL
+        fromDatabase:
+          name: marketplace-db
+          property: connectionString
+
+databases:
+  - name: marketplace-db
+    plan: free
+    region: ohio
