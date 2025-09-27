@@ -57,8 +57,6 @@ Categories - Categorización de productos
 
 Orders - Registro de pedidos y transacciones
 
-Cart - Gestión de carritos de compra
-
 🚀 Deployment:
 Despliegue en PythonAnywhere
 
