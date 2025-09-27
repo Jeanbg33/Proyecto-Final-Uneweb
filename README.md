@@ -59,8 +59,9 @@ Orders - Registro de pedidos y transacciones
 
 Cart - Gestión de carritos de compra
 
-🚀 Deployment
+🚀 Deployment:
 Despliegue en PythonAnywhere
+
 Crear cuenta en PythonAnywhere
 
 Subir los archivos del proyecto via Git o FTP
